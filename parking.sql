@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2018 at 10:03 PM
+-- Generation Time: Oct 14, 2018 at 11:42 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `parking`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `car_data`
+--
+
+CREATE TABLE `car_data` (
+  `SID` varchar(200) NOT NULL,
+  `TypeofVehicle` text NOT NULL,
+  `Vehicle_Manufacturer` text NOT NULL,
+  `RC_Number` varchar(200) NOT NULL,
+  `Vehicle_Name` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `car_data`
+--
+
+INSERT INTO `car_data` (`SID`, `TypeofVehicle`, `Vehicle_Manufacturer`, `RC_Number`, `Vehicle_Name`) VALUES
+('', 'Bike', 'hero', '12532', 'krizma ZMR');
 
 -- --------------------------------------------------------
 

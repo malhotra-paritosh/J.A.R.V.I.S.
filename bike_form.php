@@ -108,38 +108,37 @@ $password = $_REQUEST['password'];
 
             <p></p>
             <hr>
-            <form action="2ndform.php" method="post" >
+            <form action="cardata.php" method="post" >
                 <h1>Bike Information Form</h1>
 
                 <div class="contentform">
 
                     <div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
                     <div class="form-group">
-                        <p>Type of Veicle<span>*</span></p>
-                        <select class="topdown" type="gender" name="gender" id="gender" data-rule="gender" >
+                        <p>Type of Vehicle<span>*</span></p>
+                        <select class="topdown" type="tov" name="tov" id="gender" data-rule="gender" >
                             <option>Bike</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <p>Vehicle Manufacturer<span>*</span></p>
                         <span class="icon-case"><i class="fa fa-male"></i></span>
-                        <input type="text" name="SID" id="SID" value="Maruti,Ford,Honda,bajaj,etc." data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
+                        <input type="text" name="Vehiclem" id="Vehiclem" value="Maruti,Ford,Honda,bajaj,etc." data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <p>Vehicle Name<span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-male"></i></span>
+                        <input type="text" name="Vehicle_name" id="Vehicle_name"  data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
                         <div class="validation"></div>
                     </div>
                     <div class="form-group">
                         <p>Registration Number<span>*</span></p>
                         <span class="icon-case"><i class="fa fa-male"></i></span>
-                        <input type="text" name="SID" id="SID"  data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
+                        <input type="text" name="RCno" id="RCno"  data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
                         <div class="validation"></div>
                     </div>
 
-                    <div class="form-group">
-                        <p>RC Photocopy<span>*</span></p>
-                        <!--span class="icon-case"><i class="fa fa-user"></i></span-->
-                        <!--button type="file" name="SIDfile" id="SIDfile" data-rule="required" class="icon-case"-->
-                        <input type="file" name="SIDp"  id="SIDp" rows="40" cols="90"/>
-                        <div class="validation"></div>
-                    </div>
 
 
                     <!--input type="gender" name="gender" id="gender" data-rule="gender" data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire."/-->
