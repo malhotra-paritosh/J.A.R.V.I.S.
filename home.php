@@ -2,6 +2,7 @@
 require_once("config.php");
 error_reporting(0);
 ?>
+<link rel="stylesheet" href="css.css">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,8 +60,9 @@ error_reporting(0);
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Profile</a></li>
+          <li class="active"><a href="home.php">Home</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="parking_instructions.pdf">Info</a></li>
      
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -74,7 +76,7 @@ $sid = $_REQUEST['sid'];
 $password = $_REQUEST['password'];
 
 ?>
-<div class="container-fluid text-center">    
+<div class="container-fluid text-center">
   <div class="row content">
     <div class="col-sm-2 sidenav">
     	
@@ -83,7 +85,7 @@ $password = $_REQUEST['password'];
       
     </div>
     <div class="col-sm-8 text-left"> 
-      <h1>Welcome
+      <h1>Welcome to J.A.R.V.I.S.
 <?php 
 $sid = $_REQUEST['sid'];
 ?>
@@ -104,18 +106,93 @@ echo $name;
  ?>
       </h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p></p>
       <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...</p>
+        <form action="reg_form.php" method="post" >
+            <h1>Owner Data Form</h1>
+
+            <div class="contentform">
+                <div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
+
+
+                <div class="leftcontact">
+                    <div class="form-group">
+                        <p>Full Name<span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-male"></i></span>
+                        <input type="text" name="name" id="name" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
+                        <div class="validation"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Father's Name <span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-user"></i></span>
+                        <input type="text" name="father_name" id="father_name" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Prénom' doit être renseigné."/>
+                        <div class="validation"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Gender: <span>*</span></p>
+                        <select class="topdown" type="gender" name="gender" id="gender" data-rule="gender" >
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Others</option>
+                        </select>
+
+                        <!--input type="gender" name="gender" id="gender" data-rule="gender" data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire."/-->
+                        <div class="validation"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Mobile Number: <span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-home"></i></span>
+                        <input type="text" name="mobn" id="mobn" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Société' doit être renseigné."/>
+                        <div class="validation"></div>
+                    </div>
+
+                </div>
+
+                <div class="rightcontact">
+
+
+
+                    <div class="form-group">
+                        <p>Physically Challenged <span>*</span></p>
+                        <select class="topdown"  name="phychl" id="phychl" data-rule="required">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                        <!--input type="text" name="phychl" id="phychl" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Code phychl' doit être renseigné."/-->
+                        <div class="validation"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Date of Birth <span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-info"></i></span>
+                        <input type="date" name="dob" id="dob" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'dob' doit être renseigné."/>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <p>Full Address <span>*</span></p>
+                        <span class="icon-case"><i class="fa fa-location-arrow"></i></span>
+                        <input type="text" name="faddress" id="faddress" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'faddress' doit être renseigné."/>
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <button type="submit" class="bouton-contact"><a href="applform.php">Submit</a></button>
+
+        </form>
+    </div>
     </div>
     <div class="col-sm-2 sidenav">
-      <div >
-       <button type="button" class="btn ">Car reg</button>
-      </div>
-     
-        <button type="button" class="btn ">Bike Reg</button>
-      </div>
+        <div >
+            <button type="button" class="btn "><a href="applform.php"> User Application form </a></button>
+        </div>
+        <div >
+            <button type="button" class="btn "><a href="car_form.php" >Car reg</a></button>
+        </div>
+        <div >
+            <button type="button" class="btn "><a href="bike_form.php" >Bike reg</a></button>
+        </div>
     </div>
   </div>
 </div>
