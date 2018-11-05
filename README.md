@@ -1,4 +1,4 @@
-J.A.R.V.I.S. 
+J.A.R.V.I.S.
 (Just a Registration and Vehicle Information System)
 Overview
 J.A.R.V.I.S. is a system to be designed with the objective to digitise the vehicle sticker issuing system and to gather information about vehicles parked in the parking and-or elsewhere in the campus.
